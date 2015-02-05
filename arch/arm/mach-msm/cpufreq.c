@@ -60,6 +60,7 @@ static struct cpufreq_frequency_table *krait_freq_table;
 #endif
 static unsigned int *l2_khz;
 static bool is_clk;
+static bool is_sync;
 static unsigned long *mem_bw;
 static bool hotplug_ready;
 
@@ -366,7 +367,7 @@ static int __cpuinit msm_cpufreq_init(struct cpufreq_policy *policy)
 	for_each_possible_cpu(cpu)
 		if (cpu_clk[cpu] == cpu_clk[policy->cpu])
 			cpumask_set_cpu(cpu, policy->cpus);
-targets with sync CPUs
+/*targets with sync CPUs*/
 
 	cpu_work = &per_cpu(cpufreq_work, policy->cpu);
 	INIT_WORK(&cpu_work->work, set_cpu_work);
