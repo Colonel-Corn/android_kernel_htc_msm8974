@@ -133,6 +133,20 @@ config CPU_FREQ_DEFAULT_GOV_DANCEDANCE
 	bool "dancedance"
 	select CPU_FREQ_GOV_DANCEDANCE
 
+config CPU_FREQ_DEFAULT_GOV_OPTIMAX
+	bool "optimax"
+	select CPU_FREQ_GOV_OPTIMAX
+	select CPU_FREQ_GOV_PERFORMANCE
+
+config CPU_FREQ_DEFAULT_GOV_BIOSHOCK
+	bool "BioShock"
+	select CPU_FREQ_GOV_BIOSHOCK
+
+config CPU_FREQ_DEFAULT_GOV_HELLSACTIVE
+	bool "hellsactive"
+	select CPU_FREQ_GOV_HELLSACTIVE
+
+
 config CPU_FREQ_DEFAULT_GOV_ZZMOOVE
 	  bool "zzmoove"
 	  select CPU_FREQ_GOV_ZZMOOVE
@@ -474,11 +488,13 @@ config CPU_FREQ_GOV_BADASS_ALLOW_BYPASS
 
 config CPU_FREQ_GOV_BRAZILIANWAX
 	tristate "'brazilianwax' cpufreq governor"
-	depends on CPU_FREQ
-	help
-          'brazilianwax' - a "slightly more agressive smart" optimized governor!
 
-	  If in doubt, say N.
+config CPU_FREQ_GOV_BIOSHOCK
+	tristate "'bioshock' cpufreq bioshock"
+	depends on CPU_FREQ
+
+config CPU_FREQ_GOV_HELLSACTIVE
+	tristate "'hellsactive' cpufreq policy governor"
 
 config CPU_FREQ_GOV_CONSERVATIVE
 	tristate "'conservative' cpufreq governor"
