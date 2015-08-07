@@ -3227,11 +3227,6 @@ config MACH_MEC_WHL
         help
           Support for HTC MSM8974 MEC_WHL
 
-config HAS_MACH_MEMUTILS
-	default n
-	bool "Motorola MSM memcpy enhancements"
-	help
-	Faster memcpy performance for Krait
 endif
 
 config HTC_MONITOR_SUBSYS_SLEEP_TIME
@@ -3239,6 +3234,7 @@ config HTC_MONITOR_SUBSYS_SLEEP_TIME
     bool "Monitor the sleep time of sub-system"
     help
         Support to monitor the sleep time of sub-system
+
 config MSM_SLEEPER
     bool "Limit max frequency while screen is off"
     default y
